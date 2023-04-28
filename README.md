@@ -23,6 +23,6 @@ PLINK
 TreeMix
 ADMIXTURE
 csvtk
-ascp/sratoolkit #Data downloading
-gatk v4.0+ #If do snp calling
+ascp/sratoolkit # data downloading
+gatk v4.0+ # if do snp calling
 ```
