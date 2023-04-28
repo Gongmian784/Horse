@@ -1,6 +1,7 @@
-Pipeline for the Ancient East Asian Horse Project
+# Pipeline for the Ancient East Asian Horse Project
 
-Software required:
+### Software required:
+```
 python3 # could be installed by conda
 R
 blastn
@@ -22,7 +23,6 @@ PLINK
 TreeMix
 ADMIXTURE
 csvtk
-
-Optional:
 ascp/sratoolkit #Data downloading
 gatk v4.0+ #If do snp calling
+```
