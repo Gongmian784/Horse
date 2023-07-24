@@ -2,14 +2,15 @@
 mkdir ../out
 for i in `cat bamlist` ; do bash consensus.sh $i ; done
 for i in `cat select.samplelist` ; do cat ../out/${i}.fa ; done > select.fa
+cat select.fa ../../00.prepare/reference/horse_mt.fasta > select.add_ref.fa
 
-#multi-alignment
-muscle -in select.fa -out select.aln.fa
+#multi-alignment, if other public data added
+muscle -in select.add_ref.fa -out select.aln.fa
 
 #partition
 python partition.py \
     --gfffile ${MT.gff} \
-    --refid $REFID \
+    --refid MT \
     --infasta select.aln.fa \
     --partitionfilter 1st,2nd,3rd,rRNA,tRNA,sequence_feature \
     --outprefix select.aln.part6 \
