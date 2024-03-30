@@ -12,7 +12,7 @@ plink --bfile ../data/chrAuto.tv.maf0.01 \
 	--horse --recode transpose \
 	--out ../data/$1
 
-python /stor9000/apps/users/NWSUAF/2014010784/script/tped2beagle.py \
+python tped2beagle.py \
 	--tped ../data/${1}.tped \
 	--tfam ../data/${1}.tfam \
 	--outfmt beagle --outprefix ../data/${1}
