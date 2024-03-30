@@ -12,7 +12,7 @@ plink --bfile chrAuto.tv.maf0.01 \
 	--out $1
 
 # tped to beagle
-python /stor9000/apps/users/NWSUAF/2014010784/script/tped2beagle.py \
+python tped2beagle.py \
 	--tped ${1}.tped \
 	--tfam ${1}.tfam \
 	--outfmt beagle --outprefix ${1}
